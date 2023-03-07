@@ -1,3 +1,5 @@
+# Convert data from https://github.com/unimorph/hun
+
 import fileinput
 import sys
 import re
