@@ -1,3 +1,4 @@
+# Convert dumps from http://www.danielnaber.de/morphologie/ and/or https://morphy.wolfganglezius.de/
 import fileinput
 import sys
 import re
