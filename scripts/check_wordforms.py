@@ -59,7 +59,7 @@ def check_wordforms( infile: TextIO ) -> (bool, bool):
             logging.info( f'Empty infections for "{s}"')
 
         for w in infl_dict[s]:
-            if re.match( r'[^\w\x20]', w ):
+            if re.match( r'[^€\w\x20\']', w ):
                 w_badword = True
                 logging.info( f'Bad inflection: "{s}" -> "{w}"')
 
