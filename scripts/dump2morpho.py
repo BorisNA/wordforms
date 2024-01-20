@@ -67,9 +67,6 @@ with open(args.FNAME_DUMP, mode='r', encoding='utf8') as fin:
 
 		flex, base, tags = line.split("\t")
 
-		if base == "атами":
-			pass
-
 		flex = flex.strip()
 		base = base.strip()
 		tags = tags.strip()
@@ -79,7 +76,7 @@ with open(args.FNAME_DUMP, mode='r', encoding='utf8') as fin:
 		if re.match(r'^\d', flex):
 			logging.debug( f'{base}: digit {flex}')
 			continue
-		if base[0] == "-" or base[0] == "­":   # Both are dashes
+		if base[0] == "-" or base[0] == "­":   # Both entries are dashes, the second one is U+00AD (soft hyphen)
 			# some ошмётки
 			logging.debug( f'{base}: ignoring dash {flex}')
 			continue
